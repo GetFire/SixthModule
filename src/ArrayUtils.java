@@ -1,5 +1,5 @@
 
-public class ArrayUtils {
+public final class ArrayUtils {
 
     public static int sum(int[] array) {
         int sum = 0;
@@ -97,6 +97,22 @@ public class ArrayUtils {
         return maxSec;
 
     }
+
+    int[] reverse(int[] array) {
+        int a = array.length;
+        int b = 0;
+        int[] rev = new int[a];
+        for (int i = a-1; i >= 0; i--) {
+            rev[b] = array[i];
+            b++;
+        }
+        return rev;
+    }
+
+    int[] findEvenElements(int[] array){
+        return null;
+    }
+
 
 
 }
