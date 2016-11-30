@@ -98,7 +98,7 @@ public final class ArrayUtils {
 
     }
 
-    int[] reverse(int[] array) {
+   public static int[] reverse(int[] array) {
         int a = array.length;
         int b = 0;
         int[] rev = new int[a];
@@ -109,8 +109,17 @@ public final class ArrayUtils {
         return rev;
     }
 
-    int[] findEvenElements(int[] array){
-        return null;
+    public static int[] findEvenElements(int[] array){
+        int [] elements= new int[0];
+        for (int i = 0; i < array.length; i++) {
+            if(array[i]%2==0){
+                int [] same = new int[elements.length+1];
+                System.arraycopy(elements,0,same,0,elements.length);
+                elements=same;
+                elements[elements.length-1]=array[i];
+            }
+        }
+        return elements;
     }
 
 
