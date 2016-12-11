@@ -1,5 +1,7 @@
 
 public final class ArrayUtils {
+     private ArrayUtils() {
+    }
 
     public static int sum(int[] array) {
         int sum = 0;
@@ -10,7 +12,7 @@ public final class ArrayUtils {
         return sum;
     }
 
-    public static int min(int[] array) {
+    public  static int min(int[] array) {
         int min = array[0];
         for (int i = 0; i < array.length; i++) {
             if (min > array[i]) {

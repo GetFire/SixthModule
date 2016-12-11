@@ -1,7 +1,7 @@
 
 public class UserUtils {
 
-    public User[] uniqueUsers(User[] users) {
+    public static User[] uniqueUsers(User[] users) {
         boolean maska[] = new boolean[users.length];
         int removeCount = 0;
 
@@ -29,7 +29,7 @@ public class UserUtils {
         return uniq;
     }
 
-    public User[] usersWithContitionalBalance(User[] users, int balance) {
+    public static User[] usersWithContitionalBalance(User[] users, int balance) {
         User[] needUsers = new User[0];
         for (int i = 0; i < users.length; i++) {
             if (users[i].getBalance() == balance) {
@@ -43,7 +43,7 @@ public class UserUtils {
         return needUsers;
     }
 
-    public final User[] paySalaryToUsers(User[] users) {
+    public  final User[] paySalaryToUsers(User[] users) {
         for (int i = 0; i < users.length; i++) {
             users[i].setBalance(users[i].getBalance() + users[i].getSalary());
         }
@@ -57,7 +57,7 @@ public class UserUtils {
         }
         return usID;
     }
-    User[] deleteEmptyUsers(User[] users){
+    public static User[] deleteEmptyUsers(User[] users){
         User[] needUsers = new User[0];
         for (int i = 0; i < users.length; i++) {
             if (users[i]!=null){

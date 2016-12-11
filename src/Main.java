@@ -1,9 +1,10 @@
 import java.util.Arrays;
 
-public class Main {
+public class  Main {
 
 
     public static void main(String[] args) {
+
 
         User user1 = new User(1111, "Ажимов", "Denis", 3200, 2500);
         User user2 = new User(2222, "Vysotska", "Masha", 3200, 12000);
@@ -26,10 +27,9 @@ public class Main {
         System.out.println("================== Работаем с Юзерами =======================================");
         System.out.println();
 
-        UserUtils us = new UserUtils();
-        User[] uniq = us.uniqueUsers(users);
+        User[] uniq = UserUtils.uniqueUsers(users);
         System.out.println(Arrays.toString(uniq));
-        System.out.println(Arrays.toString(us.usersWithContitionalBalance(uniq, 2500)));
+        System.out.println(Arrays.toString(UserUtils.usersWithContitionalBalance(uniq, 2500)));
         User[] now = users;
         now[4] = null;
 
@@ -38,7 +38,7 @@ public class Main {
         System.out.println();
 
         System.out.println(Arrays.toString(now));
-        System.out.println(Arrays.toString(us.deleteEmptyUsers(now)));
+        System.out.println(Arrays.toString(UserUtils.deleteEmptyUsers(now)));
 
     }
 
